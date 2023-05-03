@@ -141,15 +141,19 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # }
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'a_mart',
-        'USER': 'a_mart_user',
-        'PASSWORD': 'B2Dq6lfYBOqYrI488Li2RHaa2zESqxg2',
-        'HOST': 'dpg-ch6ff9bhp8u9bo2a8vtg-a',
-        'PORT': '5432',
+    'default': dj_database_url.config(default='postgres://a_mart_user:B2Dq6lfYBOqYrI488Li2RHaa2zESqxg2@dpg-ch6ff9bhp8u9bo2a8vtg-a/a_mart', conn_max_age=600)
     }
-}
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'a_mart',
+#         'USER': 'a_mart_user',
+#         'PASSWORD': 'B2Dq6lfYBOqYrI488Li2RHaa2zESqxg2',
+#         'HOST': 'dpg-ch6ff9bhp8u9bo2a8vtg-a',
+#         'PORT': '5432',
+#     }
+# }
 
 
 # Password validation
