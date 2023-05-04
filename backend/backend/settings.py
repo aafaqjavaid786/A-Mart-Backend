@@ -140,8 +140,14 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 #     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 # }
 
+#internal
+# DATABASES = {
+#     'default': dj_database_url.config(default='postgres://a_mart_user:B2Dq6lfYBOqYrI488Li2RHaa2zESqxg2@dpg-ch6ff9bhp8u9bo2a8vtg-a/a_mart', conn_max_age=600)
+#     }
+
+#external
 DATABASES = {
-    'default': dj_database_url.config(default='postgres://a_mart_user:B2Dq6lfYBOqYrI488Li2RHaa2zESqxg2@dpg-ch6ff9bhp8u9bo2a8vtg-a/a_mart', conn_max_age=600)
+    'default': dj_database_url.config(default='postgres://a_mart_user:B2Dq6lfYBOqYrI488Li2RHaa2zESqxg2@dpg-ch6ff9bhp8u9bo2a8vtg-a.oregon-postgres.render.com/a_mart', conn_max_age=600)
     }
 
 # DATABASES = {
