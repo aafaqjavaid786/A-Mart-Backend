@@ -93,6 +93,17 @@ SIMPLE_JWT = {
     "SLIDING_TOKEN_REFRESH_SERIALIZER": "rest_framework_simplejwt.serializers.TokenRefreshSlidingSerializer",
 }
 
+
+AWS_ACCESS_KEY_ID = 'AKIATCMA6CKJTRJZ25FG'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'a-mart'
+AWS_S3_SIGNATURE_NAME = 's3v4',
+AWS_S3_REGION_NAME = 'us-east-1'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL =  None
+AWS_S3_VERITY = True
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 
