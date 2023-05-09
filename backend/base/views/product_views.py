@@ -99,6 +99,7 @@ def deleteProduct(request, pk):
 
 @api_view(['POST'])
 def uploadImage(request):
+    print("uploadImage called")
     data = request.data
 
     product_id = data['product_id']
@@ -106,6 +107,8 @@ def uploadImage(request):
 
     product.image = request.FILES.get('image')
     product.save()
+
+    print("uploadImage returned")
 
     return Response("Image was uploaded")
 
